@@ -31,8 +31,8 @@ The Pudding assembled a dataset of jean pocket size measurements, which you can 
 
 Write code which will:
 
-1.  Download the raw pocket measurements data to a file in this repository
-2.  Read the data in, ensuring that columns containing numbers are appropriately formatted.
+1.  Download the raw pocket `measurements.csv` data to a file in this repository
+2.  Read the data in, ensuring that columns containing numbers are appropriately formatted. You may consider the fabric column as a character string.
 
 ```{r}
 #| error: true
@@ -80,7 +80,8 @@ Your discussion of this output goes here
 
 ## Comparing Sexes and Styles
 
-Generate one or two plots which best showcase the difference in pocket sizes for different sexes and styles of pants. You may annotate the plot with the output from statistical tests if you wish, but it is sufficient to highlight the visual differences. Your chart(s) must have appropriate titles and axis labels, and must be constructed to take into account the principles of good graphics discussed in the textbook.
+Generate one or two plots which best showcase the difference in pocket sizes for different sexes and styles of pants. Use The Pudding's classification for pants styles, treating straight and boot-cut styles as the same and skinny and slim styles as the same. \
+You may annotate the plot with the output from statistical tests if you wish, but it is sufficient to highlight the visual differences. Your chart(s) must have appropriate titles and axis labels, and must be constructed to take into account the principles of good graphics discussed in the textbook.
 
 ```{r sex-style-code-chunk}
 #| caption: 'your caption here'
@@ -116,19 +117,17 @@ rectanglePhoneDims = pd.DataFrame.from_records(rects['rectanglePhone'], nrows = 
 rectanglePhone = pd.concat([rects.iloc[:,0:21].reset_index(drop=True), rectanglePhoneDims], axis = 1)
 ```
 
-Write a function `checkpants(length, width)` which takes length and width in centimeters and uses the largest rectangle data set from The Pudding to identify pants compatible with a specific cell phone's length and width. Return the following information in a list:
+Write a function `checkpants(phonelength, phonewidth)` which takes length and width in centimeters and uses the largest rectangle data set from The Pudding to identify pants compatible with a specific cell phone's length and width. Return the following information in a list:
 
 -   `front` - A data frame all jeans which can fit a rectangle of the specified dimension in the front pocket
 
--   `back` - a data frame of all jeans which can fit a rectangle of the specified dimension in the back pocket
+-   `back` - a data frame of all jeans which can fit a rectangle of the specified dimension in the back pocket. Assume a phone fits in the back pocket if the width is less than the `minWidthBack` measurement and the `minHeightBack` measurement is at least 70% of the phone's height.
 
 -   `price` - The average price of a pair of jeans which can fit the specified dimension in either the front or back pocket
 
 -   `propMenFront` - the proportion of men's pants that can fit a rectangle of the specified dimension in the front pocket
 
 -   `propWomenAny` - the proportion of women's pants that can fit a rectangle of the specified dimension in any pocket
-
-You may find it helpful to make some sub-functions to accomplish this task.
 
 You should ensure that you carefully read [the documentation](https://github.com/the-pudding/data/tree/master/pockets) to understand the data you are using before you attempt this question.
 
