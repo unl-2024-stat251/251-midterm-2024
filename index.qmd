@@ -2,10 +2,11 @@
 title: "Exam 1"
 author: "Your Name"
 date: "March 9, 2023"
+categories: exam
 editor: visual
 ---
 
-Your goal on this exam is to demonstrate competency in as many of the objectives of chapters we've covered in this class so far as you can.
+Your goal on this exam is to demonstrate competency in as many of the [objectives](objectives.qmd) of chapters we've covered in this class so far as you can.
 
 ## Ground Rules
 
@@ -137,3 +138,4 @@ You should ensure that you carefully read [the documentation](https://github.com
 
 
 ```
+
