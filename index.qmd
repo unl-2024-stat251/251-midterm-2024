@@ -81,7 +81,7 @@ Your discussion of this output goes here
 
 ## Comparing Sexes and Styles
 
-Generate one or two plots which best showcase the difference in pocket sizes for different sexes and styles of pants. Use The Pudding's classification for pants styles, treating straight and boot-cut styles as the same and skinny and slim styles as the same. \
+Generate one or two plots which best showcase the difference in pocket sizes for different sexes and styles of pants. Use The Pudding's classification for pants styles, treating straight and boot-cut styles as the same and skinny and slim styles as the same.\
 You may annotate the plot with the output from statistical tests if you wish, but it is sufficient to highlight the visual differences. Your chart(s) must have appropriate titles and axis labels, and must be constructed to take into account the principles of good graphics discussed in the textbook.
 
 ```{r sex-style-code-chunk}
@@ -138,4 +138,3 @@ You should ensure that you carefully read [the documentation](https://github.com
 
 
 ```
-
